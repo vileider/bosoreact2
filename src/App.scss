@@ -4,41 +4,45 @@
 
 /* OBJECTS */
 %person-content{
-  width: 50%;
-  height: 50%;
+  width: 45%;
+  height: 70%;
   .photo{
   .person-img{
-  width: 10em;
-  height: 10em;
+  width: 100%;
   }
-  background-color: #556179;
-  width: 60%;
-  height: 60%;
+  background-color: #384155;
+  width: 20em;
+  height: 100%;
   }
   .personal-info{
   background-color: $info-color;
-  width: 40%;
-  height: 40%;
+  width: 40em;
+  height: auto;
   }
   .personal-bar{
-  position: relativew;
-  bottom: 0;
+  position: absolute;
+  align-self: flex-end;
+  flex-direction: row;
   background-color: $bar-color;
-  width: 90%;
-  height: 20%;
+  width: 100em;
+  height: 5%;
   }
 }
 
 %person-one{
   .person-one{
   background-color: #1b2b4b;
+  display: flex;
+  margin: 0 0 10% 0;
+  flex-direction: row-reverse;
   @extend %person-content;
 }
 }
 
 %person-two{
   .person-two{
-  margin-top: 15%;
+  display: flex;
+  margin: 10% 0 0 0;
   background-color: #394f7a;
   @extend %person-content;
 }
@@ -91,33 +95,43 @@ main {
   justify-content: center;
   max-width: 100%;
   max-height: 100%;
-  .header {
-    justify-content: center;
-    .intro {
-    padding: 20px;
-    text-align: center;
-    text-shadow: 1px 1px #1b2b4b;
-    font-family: sans-serif;
-    font-size: 24px;
-    font-style: italic;
-    border: #1b2b4b solid;
-    height: auto;
-    width: auto;
-    }
-
-  }
+  margin: 0 5em 0 5em;
 
   /* PERSONAL JESUS */
 
   .personal-container{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
+    flex-direction: row;
     height: 100%;
     width: 100%;
     background-color: #61dafb;
     @extend %person-one;
     @extend %person-two;
+    .logotype{
+      width: 10%;
+      display: flex;
+      background-color: pink;
+      justify-self: center;
+      justify-content: center;
+      align-self: center;
+
+    }
 
   }
+
+  /* FOOTER */
+
+  .footer{
+    display: flex;
+    border-style: solid;
+    border-color: #1f5cd6;
+  }
+
+
+
+
+
+
 }
 
